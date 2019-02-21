@@ -70,7 +70,7 @@ Question: Determine the root of $f(x) = x - 2e^{-x}$ by:
 Part (a):
 \begin{itemize}
 \item[(i)] 0.1241
-\item[(ii)] 0.08294
+\item[(ii)] 0.08125
 \item[(iii)] 0.074995
 \item[(iv)] 0.003462
 \end{itemize}
@@ -92,10 +92,10 @@ Since we have step 1 already done for us we will begin with step 2.
 \begin{itemize}
 \item[Iteration 0:] $x_{NS1} = \frac{(0+1)}{2} = 0.5$. This is our first estimate of our numerical solution. $f(0) * f(0.5) = ((0) - 2e^{-(0)}) * ((0.5) - 2e^{-(0.5)}) = -2 * -0.7130 = 1.426$. Since this is greater than 0, we know our solution is in between $x_{NS1}$ and b.
 \item[Iteration 1:] $x_{NS1} = \frac{(0.5+1)}{2} = 0.75$. This is our second estimate of our numerical solution. $f(0.5) * f(0.75) = ((0.5) - 2e^{-(0.5)}) * ((0.75) - 2e^{-(0.75)}) = -0.7130 * -0.1947 = 0.1388$. Since this is greater than 0, we know our solution is in between $x_{NS1}$ and b.
-\item[Iteration 2:] $x_{NS1} = \frac{(0.75+1)}{2} = 0.875$. This is our second estimate of our numerical solution. $f(0.75) * f(0.875) = ((0.75) - 2e^{-(0.75)}) * ((0.875) - 2e^{-(0.875)}) = -0.1947 * 0.04127 = -0.0080$. Since this is less than 0, we know our solution is in between a and $x_{NS1}$.
-\item[Iteration 3:] $x_{NS1} = \frac{(0.75+0.875)}{2} = 0.8125$. This is our second estimate of our numerical solution. $f(0.75) * f(0.8125) = ((0.75) - 2e^{-(0.75)}) * ((0.8125) - 2e^{-(0.8125)}) = -0.1947 * -0.07499 = -0.0146$. Since this is less than 0, we know our solution is in between $x_{NS1}$ and a.
+\item[Iteration 2:] $x_{NS1} = \frac{(0.75+1)}{2} = 0.875$. This is our third estimate of our numerical solution. $f(0.75) * f(0.875) = ((0.75) - 2e^{-(0.75)}) * ((0.875) - 2e^{-(0.875)}) = -0.1947 * 0.04127 = -0.0080$. Since this is less than 0, we know our solution is in between a and $x_{NS1}$.
+\item[Iteration 3:] $x_{NS1} = \frac{(0.75+0.875)}{2} = 0.8125$. This is our final estimate of our numerical solution. $f(0.75) * f(0.8125) = ((0.75) - 2e^{-(0.75)}) * ((0.8125) - 2e^{-(0.8125)}) = -0.1947 * -0.07499 = -0.0146$. Since this is less than 0, we know our solution is in between $x_{NS1}$ and a.
 \end{itemize}
-The answer we end up with is 0.8125.. or 0.875 for the iteration before.
+The answer we end up with is 0.8125.. or (ii)
 \newline
 \newline
 Part (b):
