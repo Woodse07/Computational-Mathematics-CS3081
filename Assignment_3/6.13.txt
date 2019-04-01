@@ -1,0 +1,39 @@
+Wind Speed (Mph)...    14,  22,  30,  38,  46.
+Electric Power (W)... 320, 490, 540, 500, 480.
+
+Lagrange Polynomials...
+
+First-order polynomial: f(x) = ((x-x2)/(x1-x2))*y1 + ((x-x1)/(x2-x1))*y2
+
+Second-order polynomial: f(x) = ((x-x2)*(x-x3)/(x1-x2)*(x1-x3))*y1 + .. + ((x-x1)*(x-x2)/(x3-x1)*(x3-x2))*y3
+
+General formula:
+f(x) = sumof(n)(i=1) yi * Li(x).. where Li(x) = productof(n)(j=1)(j!=i) (x-xj)/(xi-xj)
+
+QUESTION:
+Determine fourth-order polynomial in the Lagrange form that passes through the points..
+use this polynomial to calculate the power at a wind speed of 26mph..
+
+Fourth-order polynomial:
+f(x) = ((x-x2)*(x-x3)*(x-x4)*(x-x5))/((x1-x2)*(x1-x3)*(x1-x4)*(x1-x5)) * y1
+	 + ((x-x1)*(x-x3)*(x-x4)*(x-x5))/((x2-x1)*(x2-x3)*(x2-x4)*(x2-x5)) * y2
+	 + ((x-x1)*(x-x2)*(x-x4)*(x-x5))/((x3-x1)*(x3-x2)*(x3-x4)*(x3-x5)) * y3
+	 + ((x-x1)*(x-x2)*(x-x3)*(x-x5))/((x4-x1)*(x4-x2)*(x4-x3)*(x4-x5)) * y4
+	 + ((x-x1)*(x-x2)*(x-x3)*(x-x4))/((x5-x1)*(x5-x2)*(x5-x3)*(x5-x4)) * y5
+	 
+f(26) = ((26-22)*(26-30)*(26-38)*(26-46))/((14-22)*(14-30)*(14-38)*(14-46)) * 320
+	  + ((26-14)*(26-30)*(26-38)*(26-46))/((22-14)*(22-30)*(22-38)*(22-46)) * 490
+	  + ((26-14)*(26-22)*(26-38)*(26-46))/((30-14)*(30-22)*(30-38)*(30-46)) * 540
+	  + ((26-14)*(26-22)*(26-30)*(26-46))/((38-14)*(38-22)*(38-30)*(38-46)) * 500
+	  + ((26-14)*(26-22)*(26-30)*(26-38))/((46-14)*(46-22)*(46-30)*(46-38)) * 480
+	 
+f(26) = (-12.5)
+	  + (229.6875)
+	  + (379.6875)
+	  + (-78.125)
+	  + (11.25)
+	 
+f(26) = 530W
+
+
+
