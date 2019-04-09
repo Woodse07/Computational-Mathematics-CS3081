@@ -20,31 +20,31 @@ f(xi+1) = f(xi) + f'(xi)(h) + (f''(xi)/2!)(h)^2
 
 
 Taylor series expansion for point xi-1:
-f(xi-1) = f(xi) + f'(xi)(xi-(xi-1)) + (f''(xi)/2!)(xi-(xi-1))^2
+f(xi-1) = f(xi) - f'(xi)(xi-(xi-1)) + (f''(xi)/2!)(xi-(xi-1))^2
 
 Sub 2h for xi-(xi-1)...
-f(xi-1) = f(xi) + f'(xi)(2h) + (f''(xi)/2!)(2h)^2
+f(xi-1) = f(xi) - f'(xi)(2h) + (f''(xi)/2!)(2h)^2
 
 
 
 Add both equations...
 f(xi+1) + f(xi-1) = f(xi) + f'(xi)(h) + (f''(xi)/2!)(h)^2 + 
-					f(xi) + f'(xi)(2h) + (f''(xi)/2!)(2h)^2
+					f(xi) - f'(xi)(2h) + (f''(xi)/2!)(2h)^2
 
-f(xi+1) + f(xi-1) = 2f(xi) + f'(xi)(h) + (5)(f''(xi)/2!)(h)^2
+f(xi+1) + f(xi-1) = 2f(xi) - f'(xi)(h) + (5)(f''(xi)/2!)(h)^2
 
 
 
 Solve for f''(xi) and introduce truncation error...
 
-f(xi+1) + f(xi-1) = 2f(xi) + f'(xi)(h) + (5)(f''(xi)/2!)(h)^2
+f(xi+1) + f(xi-1) = 2f(xi) - f'(xi)(h) + (5)(f''(xi)/2!)(h)^2
 
-(5)(f''(xi)/2!)(h)^2 = f(xi+1) + f(xi-1) - 2f(xi) - f'(xi)(h)
+(5)(f''(xi)/2!)(h)^2 = f(xi+1) + f(xi-1) - 2f(xi) + f'(xi)(h)
 
-(5)f''(xi)(h)^2 = 2(f(xi+1) + f(xi-1) - 2f(xi) - f'(xi)(h))
+(5)f''(xi)(h)^2 = 2(f(xi+1) + f(xi-1) - 2f(xi) + f'(xi)(h))
 
-f''(xi)(h)^2 = 2(f(xi+1) + f(xi-1) - 2f(xi) - f'(xi)(h)) / 5
+f''(xi)(h)^2 = 2(f(xi+1) + f(xi-1) - 2f(xi) + f'(xi)(h)) / 5
 
-f''(xi) = (2(f(xi+1) + f(xi-1) - 2f(xi) - f'(xi)(h)) / 5) + O(h^2)
+f''(xi) = (2(f(xi+1) + f(xi-1) - 2f(xi) + f'(xi)(h)) / 5) + O(h^2)
 
 
