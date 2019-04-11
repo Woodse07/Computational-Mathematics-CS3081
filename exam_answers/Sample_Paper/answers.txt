@@ -1,0 +1,21 @@
+QUESTION 1:
+
+A quarterback throws a pass to his wide receiver running a route. The quarterback releases
+the ball at a height of h_q. The wide receiver is supposed to catch the ball straight down
+the field 18m away at a height of h_r.
+
+The equation that describes the motion of the football is the familiar equation of 
+projectile motion from physics:
+
+y = x tanθ - (1/2)(x^2*g/v^2_0)(1/cos^2(θ)) + h_q
+
+Where x and y are the horizontal and vertical distance, respectively, g = 9.81ms^-2 is the
+acceleration due to gravity, v_0 is the initial velocity of the football as it leaves the
+quarterback's hand, and θ is the angle the football makes with the horizontal just as it 
+leaves the quarterback's throwing hand. 
+
+For v_0 = 15ms^-1, x = 18m, h_q = 2m, and h_r = 2.1m, find the angle θ at which the 
+quarterback must launch the ball.
+
+Write a user-defined function in MATLAB to find the solution(s) using the bisection method.
+Write out the first three iterations. Comment on your results.
