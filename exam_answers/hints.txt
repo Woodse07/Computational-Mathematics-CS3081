@@ -1,0 +1,56 @@
+EXAM HINTS
+
+- 3 questions, answer 2.
+
+- Each question is from a different chapter
+	- At least 1 chapter Eamonn covered.
+	- At least 1 chapter Fergal covered.
+
+- Question 1: 
+	- Not nonlinear equations.
+	- No subparts.
+
+- Question 2:
+	- Some nonlinear equations.
+	- 2 subparts.
+	- Has a table. (2D?)
+	- May have a subpart on theory.
+
+- Question 3:
+	- Some nonlinear equations
+	- At least 2 subparts.
+	- Might have a table. (2D?)
+	- May have a subpart on theory.
+
+- General for all questions:
+	- Guassian Quadriture will not be in any questions.
+	- Matrix & Vector norms will be on the paper (indirectly relevant).
+	- Taylor series is fundamentally important and does appear on the exam.
+	- Lagrange polynomial will be on the paper, but won't be derive general expression.
+	- There will be a finite difference question, but may not be forward, backward, central.
+	- There are no diagrams on the paper.
+	- There will be a question on non-linear equations (Question 2 or 3).
+	- Difference formulae will be relevant on the exam.
+	- All important formulae are given.
+
+- Matlab: 
+	- Do not ignore Matlab.
+	- Matlab is the nonlinear equation question.
+	- 'matrix' appears on exam, probably Q1 on Matlab? 
+	- Fergal wouldn't do the Matlab question.
+	- Can't use builtin Matlab functions.
+	- Matlab question and table question are seperate questions.
+	- At least one question on Matlab.
+
+- Derivations: 
+	- Derivations will be on the exam, formulae will be given.
+	- Integration and differentiation will be necessary.
+	- Has a start point or end point, but directed which to use. 
+
+- Strings that appear / don't appear:
+	- 'Windmill'.. (not sure if either appears or doesn't)
+	- 'Voltage'   does *not* appear on the exam.
+	- 'Physician' does *not* appear on the exam.
+	- 'Eigen'  does appear on the exam.
+	- 'Define' does appear on the exam.. (not emphasised?)
+	- 'Matrix' does appear on the exam.

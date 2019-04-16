@@ -127,9 +127,27 @@ L(26) = ((26-22)(26-30)(26-38)(26-46))/((14-22)(14-30)(14-38)(14-46)) * 320 +
 
 
 
+QUESTION 3:
 
+Using a four-term Taylor series expansion, derive a four-point backward difference formula for
+evaluation the first derivative of a function given by a set of unequally spaced points.
+The formula should give the derivative of x = xi, in terms of:
+	xi, xi-1, xi-2, xi-3, f(xi), f(xi-1), f(xi-2), f(xi-3).
 
+Answer:
 
+Taylor series expansion:
+
+	f(xi+1) = f(xi) - f'(xi)h + (f''(xi)/2!)h^2 + (f'''(E)/3!)h^3
+
+	(f'''(E)/3!)h^3 just represents the error of the estimation...
+
+	'h' is the step size..(distance between any two points' x values or h = xi+1 - xi)
+
+We have to use this formula to derive another formula that will have: 
+	xi, xi-1, xi-2, xi-3, f(xi), f(xi-1), f(xi-2), f(xi-3)
+in it. The firest step is to write out the equations for f(xi-1), f(xi-2) and f(xi-3) in terms
+of f(xi) and in a similar layout to the one above.
 
 
 
