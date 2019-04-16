@@ -19,3 +19,69 @@ quarterback must launch the ball.
 
 Write a user-defined function in MATLAB to find the solution(s) using the bisection method.
 Write out the first three iterations. Comment on your results.
+
+Answer:
+First lets see what we have..
+g 	= 9.81ms^-1
+v_0 	= 15ms^-1
+x 	= 18m
+h_q 	= 2m
+h_r 	= 2.1m
+
+We can sub into the formula with the information given..
+2.1 = (18)tanθ - (1/2)*((18)^2*(9.81)/(15)^2) * (1/cos^2(θ)) + 2
+18tan(θ) - 7.0632 * (1/cos(θ)^2) - 0.1 = 0
+
+Now we can use the bisection method on this equation..
+
+Lets pick two values a, b such that the solution lies between f(a), f(b)..
+
+a = 0.5, b = 0.3.. The solution exists between a and b here.
+
+Iteration1:
+18tan(0.5) - 7.0632 * (1/cos(0.5)^2) - 0.1 = 0.5622
+18tan(0.3) - 7.0632 * (1/cos(0.3)^2) - 0.1 = -2.271
+
+
+(0.5+0.3)/2 = 0.4... (X_ns1)
+18tan(0.4) - 7.1632 * (1/cos(0.4)) = -0.815... (X_ns1)
+
+Solution is between a and X_ns1 since a*X_ns1 is negative.
+
+Iteration2:
+(0.5+0.4)/2 = 0.45... (X_ns2)
+18tan(0.45) - 7.1632 * (1/cos(0.45)) = -0.1163... (X_ns2)
+
+Solution is between a and X_ns2 since a*X_ns2 is negative.
+
+Iteration3:
+(0.5+0.45) = 0.475... (X_ns3)
+18tan(0.475) - 7.1632 * (1/cos(0.475)) = 0.2256...
+
+Solution is between X_ns3 and b since a*X_ns3 is positive.
+
+Matlab code:
+  1 function N = BisectionMethod(Iterations)
+  2 
+  3 a = 0.5;
+  4 b = 0.3;
+  5 
+  6 for i = 1:Iterations
+  7         fa = fun(a);
+  8         fb = fun(b);
+  9         Xns = (a+b)/2;
+ 10         fXns = fun(Xns);
+ 11         if (fa*fXns > 0)
+ 12                 a = Xns;
+ 13         elseif (fa*fXns < 0)
+ 14                 b = Xns;
+ 15         end
+ 16 end
+ 17 N = Xns;
+ 18 end
+ 19 
+ 20 function N = fun(Angle)
+ 21         N = 18 * tan(Angle) - 7.0632 * (1/cos(Angle)^2) - 0.1;
+ 22 end
+ 23 
+
