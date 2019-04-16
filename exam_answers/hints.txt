@@ -43,11 +43,15 @@ EXAM HINTS:
 	- Can't use builtin Matlab functions.
 	- Matlab question and table question are seperate questions. *(Note this..)
 	- At least one question on Matlab.
+	- Will be a subpart of a question?
 
 - Derivations: 
 	- Derivations will be on the exam, formulae will be given.
 	- Integration and differentiation will be necessary.
 	- Has a start point or end point, but directed which to use. 
+	- I'm guessing this will mostly have to do with difference formulae? 
+	  Since there will be no derivation of a general expression of Lagrange Polynomial.
+	  (e.g.) 'Derive a four-point backward difference formula'...(from sample paper Q3).
 
 - Strings that appear / don't appear:
 	- 'Windmill'.. (not sure if either appears or doesn't.. I think it doesn't)
@@ -70,13 +74,23 @@ EXAM HINTS:
 			- Newton's Method.
 			- Secant Method.
 			- Fixed-point iteration Method. (Unlikely in my opinion)
+		- Similar questions to what I think this might be:
+			- Sample paper question 1.
 	
 	- Lagrange Polynomial Question:
 		- Probably question 3..?
+		- Similar questions to what I think this might be:
+			- Maybe sample paper question 2.. but that's deriving general expression,
+			  this is not.
 
 	- Finite Difference Question:
 		- Probably question 3..?
+		- Similar questions to what I think this might be:
+			- Maybe sample paper question 3.. but hints say maybe not forward, 
+			  backward, central.
 
 	- Matrix Question:
 		- Probably question 1..?
 		- I'm guessing will be on LU Decompisition.
+		- Only hint about matrices is that the word 'matrix' appears on the paper,
+		  so could be only a part of a question.. shouldn't depend on it.
