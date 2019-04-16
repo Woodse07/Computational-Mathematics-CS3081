@@ -39,24 +39,24 @@ Lets pick two values a, b such that the solution lies between f(a), f(b)..
 a = 0.5, b = 0.3.. The solution exists between a and b here.
 
 Iteration1:
-18tan(0.5) - 7.0632 * (1/cos(0.5)^2) - 0.1 = 0.5622
-18tan(0.3) - 7.0632 * (1/cos(0.3)^2) - 0.1 = -2.271
+18tan(0.5) - 7.0632 * (1/cos(0.5)^2) - 0.1 = ..
+18tan(0.3) - 7.0632 * (1/cos(0.3)^2) - 0.1 = ..
 
 
 (0.5+0.3)/2 = 0.4... (X_ns1)
-18tan(0.4) - 7.1632 * (1/cos(0.4)) = -0.815... (X_ns1)
+18tan(0.4) - 7.0632 * (1/cos(0.4)) - 0.1 = .. (X_ns1)
 
 Solution is between a and X_ns1 since a*X_ns1 is negative.
 
 Iteration2:
 (0.5+0.4)/2 = 0.45... (X_ns2)
-18tan(0.45) - 7.1632 * (1/cos(0.45)) = -0.1163... (X_ns2)
+18tan(0.45) - 7.0632 * (1/cos(0.45)) - 0.1 = .. (X_ns2)
 
-Solution is between a and X_ns2 since a*X_ns2 is negative.
+Solution is between a and X_ns2 since a*X_ns2 is positive.
 
 Iteration3:
-(0.5+0.45) = 0.475... (X_ns3)
-18tan(0.475) - 7.1632 * (1/cos(0.475)) = 0.2256...
+(0.45+0.4) = 0.475... (X_ns3)
+18tan(0.475) - 7.0632 * (1/cos(0.475)) - 0.1 = ..
 
 Solution is between X_ns3 and b since a*X_ns3 is positive.
 

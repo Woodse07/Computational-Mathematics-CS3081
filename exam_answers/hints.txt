@@ -11,6 +11,7 @@ EXAM HINTS:
 	- No subparts.
 	- My guess - Something on matrices.. (maybe LU decomposition)
 		- Might make sense since would take a long time to do, hence no subparts..?
+		- Gauss-seidel..? (Will need to learn this)
 - Question 2:
 	- Some nonlinear equations.
 	- 2 subparts.
