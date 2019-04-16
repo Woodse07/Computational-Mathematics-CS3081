@@ -85,6 +85,10 @@ Matlab code:
  22 end
  23 
 
+You can see that with every iteration, the value of f(Xns) is tending towards 0.
+With every iteration we get a more accurate value of Xns that will eventually satisfy the
+equation.
+
 
 
 QUESTION 2.
@@ -138,7 +142,7 @@ Answer:
 
 Taylor series expansion:
 
-	f(xi+1) = f(xi) - f'(xi)h + (f''(xi)/2!)h^2 + (f'''(E)/3!)h^3
+	f(xi+1) = f(xi) + f'(xi)h + (f''(xi)/2!)h^2 + (f'''(E)/3!)h^3
 
 	(f'''(E)/3!)h^3 just represents the error of the estimation...
 
@@ -148,6 +152,78 @@ We have to use this formula to derive another formula that will have:
 	xi, xi-1, xi-2, xi-3, f(xi), f(xi-1), f(xi-2), f(xi-3)
 in it. The firest step is to write out the equations for f(xi-1), f(xi-2) and f(xi-3) in terms
 of f(xi) and in a similar layout to the one above.
+
+The first thing we have to remember is that we are going backwards, *not* forwards. And so,
+the distance between the points xi and xi-1 is -h, instead of just h.
+
+	f(xi-1) = f(xi) + f'(xi)(-h) + ((f''(xi)/2!))(-h)^2 + (f'''(E)/3!)(-h)^3
+
+	f(xi-1) = f(xi) - f'(xi)*h + (f''(xi)/2!)(h)^2 - (f'''(E)/3!)*h^3
+
+That's the first equation we need. Now we do the same for f(xi-2) and f(xi-3). We have to consider
+that the distance between xi-2 and x is twice the distance than that between xi and xi-1. So,
+now we have to put in -2h instead of h in the top equation:
+
+	f(xi-2) = f(xi) + f'(xi)(-2h) + (f''(xi)/2!)(-2h)^2 + (f'''(E)/3!)(-2h)^3
+
+	f(xi-2) = f(xi) - f'(xi)(2h) + (f''(xi)/2!)(4h)^2 - (f'''(E)/3!)(8h)^3
+
+Similarly for f(xi-3)..(Remember now that we are going backwards and the distance is 3 times 
+that of the original equation):
+
+	f(xi-3) = f(xi) + f'(xi)(-3h) + (f''(xi)/2!)(-3h)^2 + (f'''(E)/3!)(-3h)^3  
+
+	f(xi-3) = f(xi) - f'(xi)(3h) + (f''(xi)/2!)(9h)^2 - (f'''(E)/3!)(27h)^3
+
+These are the three equations we need to combine to obtain the desired equestion.
+The trick here is to remove the double differentiation parts from all of the equations..(f''(xi))
+The way we do this is by adding and subtracting the equations in some way that the f''(xi) parts
+cancel out. (Multiply the f(xi-1) equation by 5, add the f(xi-2) equation and finally subtract
+the f(xi-3) equation.)
+
+	5f(xi-1) + f(xi-2) - f(xi-3) = 
+	
+		5f(xi) - f'(xi)*5h "+ (f''(xi)/2!)*5h^2" - (f'''(E)/3!)*5h^3 +
+
+		f(xi) - f'(xi)*2h "+ (f''(xi)/2!)*4h^2" - (f'''(E)/3!)*8h^3 - 
+	
+		f(xi) + f'(xi)*3h "- (f''(xi)/2!)*9h^2" + f('''(E)/3!)*27^3
+
+The expressions of the equation in quotation marks will become zero:
+
+	=> (f''(xi)/2!)*5h^2 + (f''(xi)/2!)*4h^2 - (f''(xi)/2!)*9h^2 
+	=> (f''(xi)/2!)*9h^2 - (f''(xi)/2!)*9h^2
+	=> f(''(xi)/2!)*0h^2
+	=> 0
+
+So now we have:
+
+	5f(xi-1) + f(xi-2) - f(xi-3) = 
+		
+		5f(xi) - f'(xi)*5h - (f'''(E)/3!)*5h^3 + 
+		
+		f(xi)  - f'(xi)*2h - (f'''(E)/3!)*8h^3 -
+		
+		f(xi)  + f'(xi)*3h + (f'''(E)/3!)*27h^3
+
+	5f(xi-1) + f(xi-2) - f(xi-3) = 
+
+	 	5f(xi) - f'(xi)*4h - (f'''(E)/3!)*5h^3 -
+				     (f'''(E)/3!)*8h^3 +
+				     (f'''(E)/3!)*27h^3
+
+	f'(xi)*4h = 5f(xi) - 5f(xi-1) - f(xi-2)	+ f(xi-3) - (f'''(E)/3!)*5h^3 -
+		                                            (f'''(E)/3!)*8h^3 +
+                      			                    (f'''(E)/3!)*27h^3 
+	
+	f'(xi) = (5f(xi) - 5f(xi-1) - f(xi-2) + f(xi-3))/4h - (f'''(E)/24)*5h^3 -
+                                                              (f'''(E)/24)*8h^3 +
+                                                              (f'''(E)/24)*27h^3
+
+	f'(xi) = (5f(xi) - 5f(xi-1) - f(xi-2) + f(xi-3))/4h + O(h^2)
+
+O(h^2) is the truncation error.
+
 
 
 
